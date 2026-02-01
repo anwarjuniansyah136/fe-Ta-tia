@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">Inventory</h2>
+
+        <ul class="menu">
+            <li class="active"><a href="#">🏠 Dashboard</a></li>
+            <li><a href="products.html">📦 Products</a></li>
+            <li><a href="rentals.html">📝 Rentals</a></li>
+            <li><a href="returns.html">↩️ Returns</a></li>
+            <li><a href="transactions.html">💰 Transactions</a></li>
+        </ul>
+
+        <button class="logout" onclick="logout()">Logout</button>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+        <header class="topbar">
+            <h3>Dashboard</h3>
+            <div class="user">
+                👤 <span id="userRole">Cashier</span>
+            </div>
+        </header>
+
+        <section class="content">
+            <div class="cards">
+
+                <div class="card">
+                    <h4>Total Products</h4>
+                    <p>120</p>
+                </div>
+
+                <div class="card highlight">
+                    <h4>Active Rentals</h4>
+                    <p>32</p>
+                </div>
+
+                <div class="card">
+                    <h4>Total Users</h4>
+                    <p>15</p>
+                </div>
+
+                <div class="card revenue">
+                    <h4>Revenue</h4>
+                    <p>Rp 12.500.000</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>

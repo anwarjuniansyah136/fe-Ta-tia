@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">Inventory</h2>
+
+        <ul class="menu">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="rentals.html">Rentals</a></li>
+            <li><a href="returns.html">Returns</a></li>
+            <li><a href="users.html">Users</a></li>
+            <li><a href="category.html">Category</a></li>
+            <li><a href="history.html">History</a></li>
+            <li class="active"><a href="transaction.html">Transaction</a></li>
+        </ul>
+
+        <button class="logout" onclick="logout()">Logout</button>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+        <header class="topbar">
+            <h3>Transaction</h3>
+        </header>
+
+        <section class="content">
+            <div class="table-wrapper">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Invoice</th>
+                            <th>Renter</th>
+                            <th>Phone</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transactionTable">
+                        <tr>
+                            <td colspan="9" style="text-align:center;">Loading...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+</div>
+
+<script src="transaction.js"></script>
+</body>
+</html>

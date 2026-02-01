@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+            <h2 class="logo">Inventory</h2>
+
+            <ul class="menu">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="rentals.html">Rentals</a></li>
+                <li><a href="returns.html">Returns</a></li>
+                <li class="active"><a href="users.html">Users</a></li>
+                <li><a href="category.html">Category</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="transaction.html">Transaction</a></li>
+            </ul>
+
+            <button class="logout" onclick="logout()">Logout</button>
+        </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+        <header class="topbar">
+            <h3>Users</h3>
+            <button class="btn primary" onclick="openModal()">+ Add User</button>
+        </header>
+
+        <section class="content">
+            <div class="table-wrapper">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody id="userTable">
+                    <tr>
+                        <td colspan="5" style="text-align:center;">Loading...</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal hidden" id="userModal">
+    <div class="modal-box">
+        <h3 id="modalTitle">Add User</h3>
+
+        <input type="hidden" id="userId">
+
+        <input type="text" id="username" placeholder="Username">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <input type="text" id="role" placeholder="Role (ADMIN / OWNER / USER)">
+
+        <div class="modal-actions">
+            <button class="btn primary" onclick="saveUser()">Save</button>
+            <button class="btn" onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<script src="users.js"></script>
+</body>
+</html>

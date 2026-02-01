@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+}
+
+.layout {
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 220px;
+    background: #1e293b;
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.logo {
+    margin-bottom: 30px;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.menu li.active a,
+.menu a:hover {
+    background: #2563eb;
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+}
+
+.topbar {
+    background: white;
+    padding: 15px;
+}
+
+.content {
+    padding: 20px;
+}
+
+/* FORM CARD */
+.form-card {
+    background: white;
+    max-width: 500px;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.form-card h4 {
+    margin-bottom: 20px;
+}
+
+/* FORM */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* ACTIONS */
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* BUTTON */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.primary {
+    background: #2563eb;
+    color: white;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rentals</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2 class="logo">Inventory</h2>
+
+            <ul class="menu">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li class="active"><a href="rentals.html">Rentals</a></li>
+                <li><a href="returns.html">Returns</a></li>
+                <li><a href="users.html">Users</a></li>
+                <li><a href="category.html">Category</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="transaction.html">Transaction</a></li>
+            </ul>
+
+            <button class="logout" onclick="logout()">Logout</button>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="main">
+            <header class="topbar">
+                <h3>Rentals</h3>
+                <span>👤 Admin</span>
+            </header>
+
+            <section class="content">
+
+                <div class="table-card">
+                    <h4>Rental Transactions</h4>
+
+                    <table>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Rental ID</th>
+                                    <th>Customer</th>
+                                    <th>Product</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="rentals-body"></tbody>
+                        </table>
+                    </table>
+
+                </div>
+
+            </section>
+        </main>
+
+    </div>
+
+    <script src="rentals.js"></script>
+</body>
+
+</html>

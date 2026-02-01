@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2 class="logo">Inventory</h2>
+
+            <ul class="menu">
+                <li><a href="index.html">🏠 Dashboard</a></li>
+                <li class="active"><a href="products.html">📦 Products</a></li>
+                <li><a href="rentals.html">📝 Rentals</a></li>
+                <li><a href="returns.html">↩️ Returns</a></li>
+                <li><a href="transactions.html">💰 Transactions</a></li>
+            </ul>
+
+            <button class="logout" onclick="logout()">Logout</button>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <h3>Products</h3>
+                <button class="btn primary" onclick="openModal()">+ Add Product</button>
+            </header>
+
+            <section class="content">
+                <div class="product-grid" id="productList">
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <div class="modal hidden" id="productModal">
+        <div class="modal-box">
+            <h3 id="modalTitle">Add Product</h3>
+
+            <input type="text" id="code" placeholder="Product Code">
+            <input type="text" id="name" placeholder="Product Name">
+            <input type="text" id="description" placeholder="Description">
+            <input type="number" id="price" placeholder="Price">
+            <input type="number" id="purchasePrice" placeholder="Purchase Price">
+            <input type="number" id="stock" placeholder="Stock">
+            <input type="text" id="unit" placeholder="Unit (pcs, unit, dll)">
+            <input type="text" id="categoryId" placeholder="ID Category">
+            <input type="file" id="image" accept="image/*">
+
+
+            <div class="modal-actions">
+                <button onclick="saveProduct()" class="btn primary">Save</button>
+                <button onclick="closeModal()" class="btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="products.js"></script>
+</body>
+
+</html>

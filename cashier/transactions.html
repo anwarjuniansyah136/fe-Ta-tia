@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transactions</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+            <h2 class="logo">Inventory</h2>
+
+            <ul class="menu">
+                <li><a href="index.html">🏠 Dashboard</a></li>
+                <li><a href="products.html">📦 Products</a></li>
+                <li><a href="rentals.html">📝 Rentals</a></li>
+                <li><a href="returns.html">↩️ Returns</a></li>
+                <li class="active"><a href="transactions.html">💰 Transactions</a></li>
+            </ul>
+
+            <button class="logout" onclick="logout()">Logout</button>
+        </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+        <header class="topbar">
+            <h3>Unfinished Transactions</h3>
+        </header>
+
+        <section class="content">
+            <div class="table-card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Customer</th>
+                            <th>Product</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transactionTable"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+</div>
+
+<script src="transactions.js"></script>
+</body>
+</html>

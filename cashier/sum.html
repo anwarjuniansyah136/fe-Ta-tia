@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Payment</title>
+    <link rel="stylesheet" href="sum.css">
+</head>
+
+<body>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <ul class="menu">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="rentals.html">Rentals</a></li>
+                <li class="active"><a href="returns.html">Returns</a></li>
+                <li><a href="transactions.html">Transactions</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="main">
+            <header class="topbar">
+                <h3>Payment</h3>
+            </header>
+
+            <section class="content">
+
+                <div class="payment-card">
+                    <h4>Payment Detail</h4>
+
+                    <div class="info-row">
+                        <span>Customer</span>
+                        <strong>John Doe</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Product</span>
+                        <strong>Kamera DSLR Canon</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Rental Period</span>
+                        <strong>3 Days</strong>
+                    </div>
+
+                    <div class="info-row total">
+                        <span>Total Price</span>
+                        <strong>Rp 900.000</strong>
+                    </div>
+
+                    <div class="payment-status unpaid">
+                        UNPAID
+                    </div>
+
+                    <div class="payment-actions">
+                        <button class="btn primary" onclick="finishPayment()">
+                            Payment Completed
+                        </button>
+                        <a href="rentals.html" class="btn">Cancel</a>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+    </div>
+
+    <script>
+        function finishPayment() {
+            alert("Payment successful!");
+            window.location.href = "rentals.html";
+        }
+
+        function logout() {
+            window.location.href = "../login/login.html";
+        }
+    </script>
+
+</body>
+
+</html>

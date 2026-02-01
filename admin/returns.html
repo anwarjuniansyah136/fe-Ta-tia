@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Returns</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <h2 class="logo">Inventory</h2>
+
+            <ul class="menu">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="rentals.html">Rentals</a></li>
+                <li class="active"><a href="returns.html">Returns</a></li>
+                <li><a href="users.html">Users</a></li>
+                <li><a href="category.html">Category</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="transaction.html">Transaction</a></li>
+            </ul>
+
+            <button class="logout" onclick="logout()">Logout</button>
+        </aside>
+        <main class="main">
+            <header class="topbar">
+                <h3>Product Returns</h3>
+            </header>
+
+            <section class="content">
+
+                <div class="form-card">
+                    <h4>Return Form</h4>
+
+                    <div class="form-group">
+                        <label>Rental ID</label>
+                        <input type="text" id="rentalId" placeholder="Enter rental ID">
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="btn primary">Process Return</button>
+                        <button class="btn">Cancel</button>
+                    </div>
+
+                </div>
+
+            </section>
+        </main>
+
+    </div>
+
+    <script src="returns.js"></script>
+</body>
+
+</html>

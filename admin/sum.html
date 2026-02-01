@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Payment</title>
+    <link rel="stylesheet" href="sum.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">Inventory</h2>
+
+        <ul class="menu">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="rentals.html">Rentals</a></li>
+            <li><a href="returns.html">Returns</a></li>
+            <li><a href="users.html">Users</a></li>
+            <li><a href="category.html">Category</a></li>
+            <li><a href="history.html">History</a></li>
+                <li><a href="transaction.html">Transaction</a></li>
+        </ul>
+
+        <button class="logout" onclick="logout()">Logout</button>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+        <header class="topbar">
+            <h3>Payment</h3>
+        </header>
+
+        <section class="content">
+
+            <div class="payment-card">
+                <h4>Payment Detail</h4>
+
+                <div class="info-row">
+                    <span>Customer</span>
+                    <strong id="renterName">-</strong>
+                </div>
+
+                <div class="info-row">
+                    <span>Phone</span>
+                    <strong id="renterPhone">-</strong>
+                </div>
+
+                <div class="info-row">
+                    <span>Start Date</span>
+                    <strong id="rentalDate">-</strong>
+                </div>
+
+                <div class="info-row">
+                    <span>End Date</span>
+                    <strong id="endDate">-</strong>
+                </div>
+
+                <div class="info-row total">
+                    <span>Total Price</span>
+                    <strong id="totalAmount">Rp 0</strong>
+                </div>
+
+                <div class="payment-status unpaid" id="paymentStatus">
+                    UNPAID
+                </div>
+
+                <div class="payment-actions">
+                    <button class="btn primary" onclick="finishPayment()">
+                        Payment Completed
+                    </button>
+                    <a href="rentals.html" class="btn">Cancel</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+</div>
+
+<script src="sum.js"></script>
+</body>
+</html>

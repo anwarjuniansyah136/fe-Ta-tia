@@ -1,0 +1,250 @@
+/* ===============================
+   RESET & BASE
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+    color: #333;
+}
+
+/* ===============================
+   LAYOUT
+================================ */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ===============================
+   SIDEBAR
+================================ */
+.sidebar {
+    width: 240px;
+    background: #1e293b;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.menu {
+    list-style: none;
+    flex-grow: 1;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #cbd5e1;
+    transition: all 0.2s ease;
+}
+
+.menu li a:hover,
+.menu li.active a {
+    background: #334155;
+    color: #fff;
+}
+
+.logout {
+    margin-top: auto;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #ef4444;
+    color: white;
+    cursor: pointer;
+}
+
+.logout:hover {
+    background: #dc2626;
+}
+
+/* ===============================
+   MAIN
+================================ */
+.main {
+    flex: 1;
+    padding: 20px 30px;
+}
+
+/* ===============================
+   TOPBAR
+================================ */
+.topbar {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* ===============================
+   CONTENT
+================================ */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ===============================
+   CARDS (Dashboard)
+================================ */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card h4 {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.card.highlight {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+}
+
+.card.highlight h4 {
+    color: #dbeafe;
+}
+
+.card.revenue {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+}
+
+.card.revenue h4 {
+    color: #dcfce7;
+}
+
+/* ===============================
+   FORM (Category)
+================================ */
+.card input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    outline: none;
+}
+
+.card input:focus {
+    border-color: #3b82f6;
+}
+
+.card button {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.card button:first-of-type {
+    background: #3b82f6;
+    color: white;
+}
+
+.card button:first-of-type:hover {
+    background: #2563eb;
+}
+
+.card button:last-of-type {
+    background: #e5e7eb;
+}
+
+.card button:last-of-type:hover {
+    background: #d1d5db;
+}
+
+/* ===============================
+   TABLE
+================================ */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+}
+
+table thead {
+    background: #f1f5f9;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    font-size: 14px;
+    color: #475569;
+}
+
+table tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+table button {
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+table button:first-child {
+    background: #f59e0b;
+    color: white;
+}
+
+table button:first-child:hover {
+    background: #d97706;
+}
+
+table button:last-child {
+    background: #ef4444;
+    color: white;
+}
+
+table button:last-child:hover {
+    background: #dc2626;
+}

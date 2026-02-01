@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Category</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar">
+            <h2 class="logo">Inventory</h2>
+
+            <ul class="menu">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="rentals.html">Rentals</a></li>
+                <li><a href="returns.html">Returns</a></li>
+                <li><a href="users.html">Users</a></li>
+                <li class="active"><a href="category.html">Category</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="transaction.html">Transaction</a></li>
+            </ul>
+
+            <button class="logout" onclick="logout()">Logout</button>
+        </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+        <header class="topbar">
+            <h3>Category</h3>
+        </header>
+
+        <section class="content">
+
+            <!-- FORM -->
+            <div class="card">
+                <h4 id="formTitle">Add Category</h4>
+
+                <input type="hidden" id="categoryId">
+
+                <input type="text" id="categoryName" placeholder="Category name">
+                <button onclick="saveCategory()">Save</button>
+                <button onclick="resetForm()">Cancel</button>
+            </div>
+
+            <!-- TABLE -->
+            <div class="card">
+                <h4>Category List</h4>
+
+                <table width="100%" border="1" cellpadding="8">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Name</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="categoryTable">
+                        <!-- data dari JS -->
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+    </main>
+
+</div>
+
+<script src="category.js"></script>
+</body>
+</html>
