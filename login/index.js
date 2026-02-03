@@ -40,6 +40,9 @@ async function login() {
         else if(localStorage.getItem("role") == "owner"){
             window.location.href = "../admin/index.html"
         }
+        else if(localStorage.getItem("role") == "warehouse"){
+            window.location.href = "../warehouse/index.html"
+        }
 
     } catch (error) {
         messageEl.innerText = "Tidak bisa terhubung ke server";

@@ -1,14 +1,12 @@
 const API_URL = "http://localhost:8080/api/v1/rentals";
 
-// document.getElementById("rentalSubmit").addEventListener("submit", function (e) {
-//     e.preventDefault();
-//     saveRental();
-// });
-
+const params = new URLSearchParams(window.location.search);
 const renterName = document.getElementById("renterName");
 const renterPhone = document.getElementById("renterPhone");
 const rentalDate = document.getElementById("rentalDate");
 const endDate = document.getElementById("endDate");
+const quantity = document.getElementById("qty")
+const productId = params.get("productId");
 
 async function saveRental() {
 
@@ -22,10 +20,14 @@ async function saveRental() {
         renterPhone: renterPhone.value,
         rentalDate: rentalDate.value+"T00:00:00",
         endDate: endDate.value+"T00:00:00",
-        totalAmount: 0
+        totalAmount: 0,
+        quantity: quantity.value,
+        productId: productId
     };
 
-    // try {
+    console.log(payload)
+
+    try {
         const res = await fetch(API_URL, {
             method: "POST",
             headers: {
@@ -42,10 +44,10 @@ async function saveRental() {
         }
 
         alert("Rental created successfully!");
-        window.location.href = "sum .html";
+        window.location.href = `sum.html?id=${data.data.id}`;
 
-    // } catch (err) {
-    //     console.error(err);
-    //     alert("Error creating rental");
-    // }
+    } catch (err) {
+        console.error(err);
+        alert("Error creating rental");
+    }
 }

@@ -9,77 +9,78 @@
 
 <body>
 
-    <div class="layout">
-        <aside class="sidebar">
-            <ul class="menu">
-                <li><a href="index.html">Dashboard</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="rentals.html">Rentals</a></li>
-                <li class="active"><a href="returns.html">Returns</a></li>
-                <li><a href="transactions.html">Transactions</a></li>
-                <li><a href="#" onclick="logout()">Logout</a></li>
-            </ul>
-        </aside>
+<div class="layout">
 
-        <!-- MAIN -->
-        <main class="main">
-            <header class="topbar">
-                <h3>Payment</h3>
-            </header>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">Inventory</h2>
 
-            <section class="content">
+        <ul class="menu">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="rentals.html">Rentals</a></li>
+            <li><a href="returns.html">Returns</a></li>
+            <li><a href="category.html">Category</a></li>
+            <li><a href="history.html">Report</a></li>
+                <li><a href="transaction.html">Transaction</a></li>
+        </ul>
 
-                <div class="payment-card">
-                    <h4>Payment Detail</h4>
+        <button class="logout" onclick="logout()">Logout</button>
+    </aside>
 
-                    <div class="info-row">
-                        <span>Customer</span>
-                        <strong>John Doe</strong>
-                    </div>
+    <!-- MAIN -->
+    <main class="main">
+        <header class="topbar">
+            <h3>Payment</h3>
+        </header>
 
-                    <div class="info-row">
-                        <span>Product</span>
-                        <strong>Kamera DSLR Canon</strong>
-                    </div>
+        <section class="content">
 
-                    <div class="info-row">
-                        <span>Rental Period</span>
-                        <strong>3 Days</strong>
-                    </div>
+            <div class="payment-card">
+                <h4>Payment Detail</h4>
 
-                    <div class="info-row total">
-                        <span>Total Price</span>
-                        <strong>Rp 900.000</strong>
-                    </div>
-
-                    <div class="payment-status unpaid">
-                        UNPAID
-                    </div>
-
-                    <div class="payment-actions">
-                        <button class="btn primary" onclick="finishPayment()">
-                            Payment Completed
-                        </button>
-                        <a href="rentals.html" class="btn">Cancel</a>
-                    </div>
+                <div class="info-row">
+                    <span>Customer</span>
+                    <strong id="renterName">-</strong>
                 </div>
 
-            </section>
-        </main>
+                <div class="info-row">
+                    <span>Phone</span>
+                    <strong id="renterPhone">-</strong>
+                </div>
 
-    </div>
+                <div class="info-row">
+                    <span>Start Date</span>
+                    <strong id="rentalDate">-</strong>
+                </div>
 
-    <script>
-        function finishPayment() {
-            alert("Payment successful!");
-            window.location.href = "rentals.html";
-        }
+                <div class="info-row">
+                    <span>End Date</span>
+                    <strong id="endDate">-</strong>
+                </div>
 
-        function logout() {
-            window.location.href = "../login/login.html";
-        }
-    </script>
+                <div class="info-row total">
+                    <span>Total Price</span>
+                    <strong id="totalAmount">Rp 0</strong>
+                </div>
 
+                <div class="payment-status unpaid" id="paymentStatus">
+                    UNPAID
+                </div>
+
+                <div class="payment-actions">
+                    <button class="btn primary" onclick="finishPayment()">
+                        Payment Completed
+                    </button>
+                    <a href="rentals.html" class="btn">Cancel</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+</div>
+
+<script src="sum.js"></script>
 </body>
-
 </html>

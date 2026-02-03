@@ -12,15 +12,17 @@
     <div class="layout">
 
         <!-- SIDEBAR -->
-        <aside class="sidebar">
+         <aside class="sidebar">
             <h2 class="logo">Inventory</h2>
 
             <ul class="menu">
-                <li><a href="index.html">🏠 Dashboard</a></li>
-                <li class="active"><a href="products.html">📦 Products</a></li>
-                <li><a href="rentals.html">📝 Rentals</a></li>
-                <li><a href="returns.html">↩️ Returns</a></li>
-                <li><a href="transactions.html">💰 Transactions</a></li>
+                <li><a href="index.html">Dashboard</a></li>
+                <li class="active"><a href="products.html">Products</a></li>
+                <li><a href="rentals.html">Rentals</a></li>
+                <li><a href="returns.html">Returns</a></li>
+                <li><a href="category.html">Category</a></li>
+                <li><a href="history.html">Report</a></li>
+                <li><a href="transaction.html">Transaction</a></li>
             </ul>
 
             <button class="logout" onclick="logout()">Logout</button>
@@ -51,8 +53,11 @@
             <input type="number" id="purchasePrice" placeholder="Purchase Price">
             <input type="number" id="stock" placeholder="Stock">
             <input type="text" id="unit" placeholder="Unit (pcs, unit, dll)">
-            <input type="text" id="categoryId" placeholder="ID Category">
-            <input type="file" id="image" accept="image/*">
+            <select id="categoryId">
+                <option value="">-- Select Category --</option>
+            </select>
+            
+            <!-- <input type="file" id="image" accept="image/*"> -->
 
 
             <div class="modal-actions">

@@ -1,4 +1,10 @@
 const API_URL = "http://localhost:8080/api/v1/products";
+const BASE_URL = "http://localhost:8080/api/v1";
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadCategories();
+    loadProducts(); // kalau sudah ada
+});
 
 /* =========================
    ELEMENTS
@@ -10,6 +16,7 @@ const code = document.getElementById("code");
 const name = document.getElementById("name");
 const description = document.getElementById("description");
 const categoryId = document.getElementById("categoryId");
+const purchasePrice = document.getElementById("purchasePrice")
 const price = document.getElementById("price");
 const stock = document.getElementById("stock");
 const unit = document.getElementById("unit");
@@ -72,20 +79,19 @@ function closeModal() {
     modal.classList.add("hidden");
 }
 
-/* =========================
-   SAVE PRODUCT
-========================= */
 async function saveProduct() {
     const payload = {
         code: code.value,
         name: name.value,
         description: description.value,
-        category_id: categoryId.value,
+        categoryId: categoryId.value,
         price: Number(price.value),
-        purchase_price: Number(price.value),
+        purchasePrice: Number(price.value),
         stock: Number(stock.value),
         unit: unit.value
     };
+
+    console.log(payload)
 
     const method = editId ? "PUT" : "POST";
     const url = editId ? `${API_URL}/${editId}` : API_URL;
@@ -127,8 +133,8 @@ function renderProducts() {
         const card = document.createElement("div");
         card.className = "product-card";
 
+            // <img src="${p.image_url || 'no-image.png'}" alt=""></img>
         card.innerHTML = `
-            <img src="${p.image_url || 'no-image.png'}" alt="">
             <div class="product-body">
                 <h4>${p.name}</h4>
                 <p>Rp ${Number(p.price).toLocaleString()}</p>
@@ -145,8 +151,9 @@ function renderProducts() {
         card.querySelector(".btn-edit").onclick = () => openModal(p);
         card.querySelector(".btn-delete").onclick = () => deleteProduct(p.id);
         card.querySelector(".btn-rent").onclick = () => {
-            window.location.href = `rental-users.html`
-        }
+            window.location.href = `rental-users.html?productId=${p.id}`;
+        };
+
 
         productList.appendChild(card);
     });
@@ -156,3 +163,22 @@ function renderProducts() {
    INIT
 ========================= */
 document.addEventListener("DOMContentLoaded", loadProducts);
+async function loadCategories() {
+    try {
+        const response = await fetch(`${BASE_URL}/categories`);
+        const categories = await response.json();
+
+        const select = document.getElementById("categoryId");
+        select.innerHTML = `<option value="">-- Select Category --</option>`;
+
+        categories.forEach(cat => {
+            const option = document.createElement("option");
+            option.value = cat.id;
+            option.textContent = cat.name;
+            select.appendChild(option);
+        });
+
+    } catch (error) {
+        console.error("Failed load categories", error);
+    }
+}
