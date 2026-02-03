@@ -16,7 +16,6 @@ function loadTransactions() {
 }
 
 function renderTable(data) {
-    console.log(data)
     const tbody = document.getElementById("transactionTable");
     tbody.innerHTML = "";
 

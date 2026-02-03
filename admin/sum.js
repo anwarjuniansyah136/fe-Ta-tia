@@ -15,8 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(res => res.json())
         .then(res => {
 
-            console.log(res)
-
             document.getElementById("renterName").innerText = res.renterName ?? "-";
             document.getElementById("renterPhone").innerText = res.renterPhone ?? "-";
             document.getElementById("rentalDate").innerText = res.startDate ?? "-";

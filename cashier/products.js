@@ -100,8 +100,6 @@ async function saveProduct() {
         unit: unit.value
     };
 
-    console.log(payload)
-
     const method = editId ? "PUT" : "POST";
     const url = editId ? `${API_URL}/${editId}` : API_URL;
 
@@ -157,8 +155,6 @@ function renderProducts() {
     products.forEach(p => {
         const card = document.createElement("div");
         card.className = "product-card";
-
-        console.log(p.imageUrl)
 
         card.innerHTML = `
             <div class="product-body">

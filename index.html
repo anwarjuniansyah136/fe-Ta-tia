@@ -147,7 +147,6 @@
   fetch(API_URL)
     .then(res => res.json())
     .then(result => {
-        console.log(result);
       const products = result.data || result;
       const container = document.getElementById("productList");
 
@@ -156,7 +155,7 @@
         card.className = "card";
 
         card.innerHTML = `
-          <img src="${p.imageUrl || 'https://via.placeholder.com/300'}" />
+          <img src="http://localhost:8080/images/products/${p.imageUrl}" />
           <h4>${p.name}</h4>
           <div class="category">Kategori: ${p.categoryName}</div>
           <p>${p.description || '-'}</p>
@@ -168,7 +167,6 @@
       });
     })
     .catch(err => {
-      console.error(err);
       document.getElementById("productList").innerHTML = "<p>Gagal memuat data produk</p>";
     });
 </script>

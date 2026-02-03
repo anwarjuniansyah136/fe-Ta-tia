@@ -25,8 +25,6 @@ async function saveRental() {
         productId: productId
     };
 
-    console.log(payload)
-
     try {
         const res = await fetch(API_URL, {
             method: "POST",

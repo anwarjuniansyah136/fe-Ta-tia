@@ -27,7 +27,6 @@ async function loadDashboard() {
         document.getElementById("revenue").innerText = formatRupiah(data.revenue);
 
     } catch (error) {
-        console.error(error);
         alert("Gagal memuat data dashboard");
     }
 }

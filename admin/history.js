@@ -39,7 +39,6 @@ async function loadHistory() {
         });
 
     } catch (err) {
-        console.error(err);
         document.getElementById("historyTable").innerHTML = `
             <tr>
                 <td colspan="6" style="text-align:center;color:red;">
