@@ -48,8 +48,6 @@ async function loadUsers() {
     }
 }
 
-/* ================= LOAD ROLES ================= */
-
 async function loadRoles(selectedRoleId = "") {
     const roleSelect = document.getElementById("role");
     roleSelect.innerHTML = `<option value="">Loading...</option>`;

@@ -11,7 +11,6 @@ body {
     display: flex;
 }
 
-/* SIDEBAR */
 .sidebar {
     width: 220px;
     background: #1e293b;
@@ -45,7 +44,6 @@ body {
     background: #2563eb;
 }
 
-/* MAIN */
 .main {
     flex: 1;
 }
@@ -59,7 +57,6 @@ body {
     padding: 20px;
 }
 
-/* FORM CARD */
 .form-card {
     background: white;
     max-width: 500px;
@@ -71,7 +68,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* FORM */
 .form-group {
     margin-bottom: 15px;
 }
@@ -90,14 +86,12 @@ body {
     border: 1px solid #ccc;
 }
 
-/* ACTIONS */
 .form-actions {
     display: flex;
     gap: 10px;
     margin-top: 20px;
 }
 
-/* BUTTON */
 .btn {
     padding: 10px 15px;
     border: none;

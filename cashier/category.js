@@ -4,9 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     loadCategories();
 });
 
-/* =========================
-   GET ALL
-========================= */
 async function loadCategories() {
     const response = await fetch(BASE_URL);
     const data = await response.json();
@@ -28,9 +25,6 @@ async function loadCategories() {
     });
 }
 
-/* =========================
-   CREATE & UPDATE
-========================= */
 async function saveCategory() {
     const id = document.getElementById("categoryId").value;
     const name = document.getElementById("categoryName").value;
@@ -62,18 +56,12 @@ async function saveCategory() {
     loadCategories();
 }
 
-/* =========================
-   EDIT
-========================= */
 function editCategory(id, name) {
     document.getElementById("categoryId").value = id;
     document.getElementById("categoryName").value = name;
     document.getElementById("formTitle").innerText = "Update Category";
 }
 
-/* =========================
-   DELETE
-========================= */
 async function deleteCategory(id) {
     if (!confirm("Yakin ingin menghapus category ini?")) return;
 
@@ -84,9 +72,6 @@ async function deleteCategory(id) {
     loadCategories();
 }
 
-/* =========================
-   RESET FORM
-========================= */
 function resetForm() {
     document.getElementById("categoryId").value = "";
     document.getElementById("categoryName").value = "";

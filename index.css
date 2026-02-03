@@ -10,7 +10,6 @@ body {
     color: #333;
 }
 
-/* Navbar */
 .navbar {
     background: #1b4332;
     color: #fff;
@@ -27,7 +26,6 @@ body {
     font-weight: 500;
 }
 
-/* Hero */
 .hero {
     background-image: url("https://images.unsplash.com/photo-1500534314209-a25ddb2bd429");
     background-size: cover;
@@ -59,7 +57,6 @@ body {
     opacity: 0.8;
 }
 
-/* Products */
 .products {
     padding: 60px 40px;
 }
@@ -110,7 +107,7 @@ body {
     color: #1b4332;
 }
 
-/* Info */
+
 .info {
     background: #e9f5ee;
     padding: 60px 40px;
@@ -136,7 +133,6 @@ body {
     box-shadow: 0 6px 15px rgba(0,0,0,0.06);
 }
 
-/* Footer */
 footer {
     background: #1b4332;
     color: white;

@@ -1,17 +1,14 @@
-/* ===== BASE ===== */
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
     background: #f1f5f9;
 }
 
-/* ===== LAYOUT ===== */
 .layout {
     display: flex;
     min-height: 100vh;
 }
 
-/* ===== SIDEBAR ===== */
 .sidebar {
     width: 220px;
     background: #0f172a;
@@ -48,7 +45,6 @@ body {
     color: #fff;
 }
 
-/* ===== MAIN ===== */
 .main {
     flex: 1;
 }
@@ -63,7 +59,6 @@ body {
     padding: 40px;
 }
 
-/* ===== PAYMENT CARD ===== */
 .payment-card {
     background: #ffffff;
     max-width: 520px;
@@ -77,7 +72,6 @@ body {
     font-size: 18px;
 }
 
-/* ===== INFO ===== */
 .info-row {
     display: flex;
     justify-content: space-between;
@@ -95,7 +89,6 @@ body {
     font-weight: bold;
 }
 
-/* ===== STATUS ===== */
 .payment-status {
     margin: 20px 0;
     padding: 12px;
@@ -114,8 +107,6 @@ body {
     background: #dcfce7;
     color: #15803d;
 }
-
-/* ===== ACTIONS ===== */
 .payment-actions {
     display: flex;
     gap: 12px;

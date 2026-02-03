@@ -1,17 +1,11 @@
 const API_URL = "http://localhost:8080/api/v1/products";
 const BASE_URL = "http://localhost:8080/api/v1";
 
-/* =========================
-   INIT
-========================= */
 document.addEventListener("DOMContentLoaded", () => {
     loadCategories();
     loadProducts();
 });
 
-/* =========================
-   ELEMENTS
-========================= */
 const modal = document.getElementById("productModal");
 const modalTitle = document.getElementById("modalTitle");
 
@@ -27,15 +21,9 @@ const imageInput = document.getElementById("image");
 
 const productList = document.getElementById("productList");
 
-/* =========================
-   STATE
-========================= */
 let products = [];
 let editId = null;
 
-/* =========================
-   LOAD PRODUCTS
-========================= */
 async function loadProducts() {
     try {
         const res = await fetch(API_URL);
@@ -46,9 +34,6 @@ async function loadProducts() {
     }
 }
 
-/* =========================
-   LOAD CATEGORIES
-========================= */
 async function loadCategories() {
     try {
         const response = await fetch(`${BASE_URL}/categories`);
@@ -67,9 +52,6 @@ async function loadCategories() {
     }
 }
 
-/* =========================
-   MODAL
-========================= */
 function openModal(product = null) {
     modal.classList.remove("hidden");
 
@@ -106,9 +88,6 @@ function closeModal() {
     modal.classList.add("hidden");
 }
 
-/* =========================
-   SAVE PRODUCT + AUTO UPLOAD PHOTO
-========================= */
 async function saveProduct() {
     const payload = {
         code: code.value,
@@ -127,7 +106,6 @@ async function saveProduct() {
     const url = editId ? `${API_URL}/${editId}` : API_URL;
 
     try {
-        // 1️⃣ CREATE / UPDATE PRODUCT (JSON)
         const res = await fetch(url, {
             method,
             headers: {
@@ -162,9 +140,6 @@ async function saveProduct() {
     }
 }
 
-/* =========================
-   DELETE
-========================= */
 async function deleteProduct(id) {
     if (!confirm("Delete this product?")) return;
 
@@ -176,9 +151,6 @@ async function deleteProduct(id) {
     }
 }
 
-/* =========================
-   RENDER PRODUCTS
-========================= */
 function renderProducts() {
     productList.innerHTML = "";
 

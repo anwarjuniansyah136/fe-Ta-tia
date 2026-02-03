@@ -9,13 +9,11 @@ body {
     color: #111827;
 }
 
-/* LAYOUT */
 .layout {
     display: flex;
     min-height: 100vh;
 }
 
-/* SIDEBAR */
 .sidebar {
     width: 240px;
     background: #111827;
@@ -67,13 +65,11 @@ body {
     font-weight: 600;
 }
 
-/* MAIN */
 .main {
     flex: 1;
     padding: 24px;
 }
 
-/* TOPBAR */
 .topbar {
     background: white;
     padding: 16px 24px;
@@ -89,12 +85,10 @@ body {
     color: #4f46e5;
 }
 
-/* CONTENT */
 .content {
     margin-top: 24px;
 }
 
-/* CARDS */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -125,7 +119,6 @@ body {
     font-weight: bold;
 }
 
-/* SPECIAL */
 .highlight {
     border-left: 6px solid #4f46e5;
 }
@@ -133,7 +126,6 @@ body {
 .revenue {
     border-left: 6px solid #16a34a;
 }
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -141,7 +133,6 @@ body {
     font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
-/* LAYOUT */
 body {
     background: #f4f6f9;
     color: #333;
@@ -152,7 +143,6 @@ body {
     min-height: 100vh;
 }
 
-/* SIDEBAR */
 .sidebar {
     width: 240px;
     background: #1e293b;
@@ -213,13 +203,11 @@ body {
     background: #dc2626;
 }
 
-/* MAIN */
 .main {
     flex: 1;
     padding: 25px;
 }
 
-/* TOPBAR */
 .topbar {
     display: flex;
     justify-content: space-between;
@@ -231,7 +219,6 @@ body {
     font-size: 22px;
 }
 
-/* BUTTON */
 .btn {
     padding: 10px 16px;
     border-radius: 8px;
@@ -249,21 +236,18 @@ body {
     background: #1d4ed8;
 }
 
-/* CONTENT */
 .content {
     background: white;
     padding: 20px;
     border-radius: 12px;
 }
 
-/* PRODUCT GRID */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
 }
 
-/* PRODUCT CARD (dipakai via JS) */
 .product-card {
     background: #f9fafb;
     border-radius: 12px;
@@ -297,7 +281,6 @@ body {
     margin-bottom: 6px;
 }
 
-/* MODAL */
 .modal {
     position: fixed;
     inset: 0;
@@ -336,7 +319,7 @@ body {
     gap: 10px;
     margin-top: 10px;
 }
-/* TABLE */
+
 .table-card {
     background: white;
     padding: 20px;
@@ -363,7 +346,6 @@ th {
     font-weight: 600;
 }
 
-/* STATUS */
 .onrent {
     color: #2563eb;
     font-weight: 600;
@@ -374,7 +356,6 @@ th {
     font-weight: 600;
 }
 
-/* BUTTON SMALL */
 .btn.small {
     padding: 6px 10px;
     font-size: 13px;
